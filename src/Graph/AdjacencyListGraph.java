@@ -7,9 +7,12 @@ public class AdjacencyListGraph<T> {
     public  AdjacencyListGraph() {
         this.vertices=new LinkedList<>();
     }
+
     public void addVertex(T value){
-        vertices.add(new Vertex(value));
+        Vertex vtx=new Vertex(value);
+        vertices.add(vtx);
     }
+
     public void addEdge(T first,T second){
         Vertex f=get(first);
         Vertex s=get(second);
@@ -19,6 +22,7 @@ public class AdjacencyListGraph<T> {
             s.neighbours.add(f);
         }
     }
+
     public Vertex get(T value){
 
         for(Vertex vertex: vertices){
@@ -28,6 +32,7 @@ public class AdjacencyListGraph<T> {
         }
         return null;
     }
+
     public void BFT(){
         Queue<Vertex> queue =new LinkedList<>();
         Set<Vertex> visited = new HashSet<>();

@@ -11,6 +11,7 @@ public class DiceCount {
         System.out.println(DiceDpCount(n, mem));
         System.out.println(DiceDpItr(n,mem));
 
+
     }
 
     public static int Dicecount(int target) {

@@ -20,7 +20,7 @@ public class DjClient {
         g.addEdge("E", "F", 1);
         g.addEdge("E", "G", 4);
         g.addEdge("F", "G", 7);
-        g.dijkstra("A");
+        g.dijkstra("D");
 
 }
 }
