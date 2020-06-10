@@ -1,4 +1,4 @@
-package Array;
+package Sorting_Algorithms;
 import java.util.Arrays;
 public class Selection_sort {
     public static void main(String[] args) {

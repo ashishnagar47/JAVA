@@ -16,8 +16,10 @@ public class diff__char {
             ch_1=str.charAt(i);
             ch_2=str.charAt(i+1);
             a=ch_1-ch_2;
-            System.out.print((char)ch_1+(int)a);
+            System.out.print((ch_1)+""+a);
+
             }
-                     return;
+        System.out.println(str.charAt(len-1));
+        return;
         }
     }

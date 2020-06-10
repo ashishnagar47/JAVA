@@ -1,4 +1,4 @@
-package Array;
+package Sorting_Algorithms;
 
 import org.w3c.dom.ls.LSOutput;
 
@@ -60,7 +60,7 @@ public static void main(String args[] ) throws Exception {
             }
         }
     }
-    for(int i=0;i<n-2;i++){
+    for(int i=0;i<n;i++){
         System.out.print(arr[i]+" ");
     }
 }

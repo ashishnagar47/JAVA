@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Min_indexed_char {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
+        int n = Integer.parseInt(s.nextLine());
         for (int k = 0; k < n; k++) {
             String str1 = s.nextLine();
             String str2 = s.nextLine();

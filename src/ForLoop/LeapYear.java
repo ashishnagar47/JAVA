@@ -1,8 +1,8 @@
-package Lec1;
+package ForLoop;
 
 import java.util.Scanner;
 
-public class Lecture_1 {
+public class LeapYear {
     public static void main(String[] args) {
 
         Scanner s=new Scanner(System.in);

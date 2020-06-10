@@ -1,4 +1,4 @@
-package Lec1;
+package ForLoop;
 
 import java.util.Scanner;
 

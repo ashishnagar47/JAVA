@@ -1,4 +1,4 @@
-package Array;
+package Sorting_Algorithms;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -31,13 +31,13 @@ public class insertion_sort {
 }
 */
         Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
+        int test = s.nextInt();
 
         ArrayList list=new ArrayList();
-        for (int k = n; k > 0; k--) {
+        for (int k = test; k > 0; k--) {
             int row = s.nextInt();
-            int[] arr = new int[row * row];
-            for (int i = 0; i < row * row; i++) {
+            int[] arr = new int[row];
+            for (int i = 0; i < row; i++) {
                 //   for(int j=0;j<row;j++){
                 arr[i] = s.nextInt();
             }

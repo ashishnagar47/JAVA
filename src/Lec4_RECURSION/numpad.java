@@ -14,6 +14,7 @@ public class numpad {
             return;}
         char ch=unprocessed.charAt(0);
         int n=Integer.parseInt(String.valueOf(ch));
+        //System.out.println(n);
         unprocessed=unprocessed.substring(1);
         for (int j = 3*(n-1); j <n*3; j++) {
             if(j==26){

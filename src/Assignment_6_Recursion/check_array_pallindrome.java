@@ -12,7 +12,6 @@ public class check_array_pallindrome {
     public static void main(String[] args) {
         Scanner s=new Scanner(System.in);
         int n=s.nextInt();
-        int index=0;
         int[] arr=new int[n];
         for (int i = 0; i <n ; i++) {
             arr[i]=s.nextInt();
@@ -23,7 +22,7 @@ public class check_array_pallindrome {
             rev[j]=arr[i];
             i=i-1;
         }
-        System.out.println(pallindrome(arr,rev,n,index));
+        System.out.println(pallindrome(arr,rev,n,0));
     }
     public static boolean pallindrome(int arr[],int rev[],int n,int index){
         if(index==n){

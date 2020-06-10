@@ -1,6 +1,5 @@
-package Lec1;
+package ForLoop;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 class strings{

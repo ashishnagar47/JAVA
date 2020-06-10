@@ -1,4 +1,4 @@
-package Array;
+package Sorting_Algorithms;
 
 import java.util.Arrays;
 import java.util.Scanner;

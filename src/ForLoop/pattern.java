@@ -1,6 +1,4 @@
-package Lec1;
-
-import org.w3c.dom.ls.LSInput;
+package ForLoop;
 
 import java.util.Scanner;
 
