@@ -1,6 +1,9 @@
 package Binary_tree;
 
-import java.util.*;
+import java.util.Scanner;
+import java.util.Queue;
+import  java.util.LinkedList;
+import java.util.Arrays;
 
 public class BT {
     private Node root;
@@ -15,7 +18,6 @@ public class BT {
     }
 
    public void insert(Scanner s){
-
         this.root=insert(root,s);
     }
     private Node insert(Node node,Scanner s){
@@ -36,7 +38,6 @@ public class BT {
     }
 
     public Node findNode(int value){
-
         return findNode(root,value);
     }
     private Node findNode(Node node,int value){
@@ -65,7 +66,6 @@ public class BT {
     }
 
     public int height(){
-
         return height(root);
     }
     private int height(Node node){

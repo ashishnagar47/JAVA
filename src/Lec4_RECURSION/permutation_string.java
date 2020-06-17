@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class permutation_string {
     public static void main(String[] args) {
-        String s="aaa";
+        Scanner scan=new Scanner(System.in);
+        String s=scan.nextLine();
         int len=s.length();
         per("",s);
     }

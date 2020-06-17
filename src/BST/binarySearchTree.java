@@ -6,14 +6,12 @@ public class binarySearchTree {
     private Node root;
 
     public void insert(int val){
-
             this.root= insert(root,val);
         }
 
         private Node insert(Node node, int val) {
-
             if(node==null){
-//            Node node1 =new Node(value);
+            //Node node1 =new Node(value);
                 return new Node(val);
             }
 
@@ -129,29 +127,20 @@ public class binarySearchTree {
     }
 
 
+
     public int successor(int value){
-
             Node success=null;
-
             Node current =root;
-
             while(current!=null){
-
                 if(current.value>value){
-
-
                     if(success==null || success.value>current.value){
-
                         success=current;
                     }
-
                     current=current.left;
                 }
-
                 else{
                     current=current.right;
                 }
-
             }
             return success.value;
     }
@@ -203,7 +192,6 @@ public class binarySearchTree {
 
 
     public void makefromsorted(int ar[],int start, int end){
-
             if(start>end){
                 return;
             }
@@ -217,10 +205,8 @@ public class binarySearchTree {
     }
 
 
-
     public int height(){
             return height(root);
-
         }
 
         public int height(Node node){

@@ -10,8 +10,8 @@ public class Stack_Client {
             stack.push(i);
         }
         try {
-            for (int i = 0; i < 15; i++) {
-                stack.pop();
+            for (int i = 0; i < 6; i++) {
+                System.out.println(stack.pop());
             }
         }
         catch(Exception e){

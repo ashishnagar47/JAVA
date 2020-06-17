@@ -30,7 +30,7 @@ public class Stacks {
               //  System.out.println("empty");
             //    return -1;
             }
-            int temp=ar[top--];
+            int temp=ar[--top];
            // top--;
             return temp;
         }
