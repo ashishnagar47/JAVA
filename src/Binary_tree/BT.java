@@ -80,27 +80,26 @@ public class BT {
     public void display(){
         display(this.root,"");
     }
-    private void display(Node node,String indent){
-        if(node==null){
-            return;
-        }//FOR PREORDER(Root,left,Right)
-        //System.out.println(indent+node.value);
-        display(node.left,indent+"\t");
-        /*
-        FOR INORDER(left,Root,Right)::
-        System.out.println(indent+node.value);
-         */
-        display(node.right,indent+"\t");
-        //
-       // FOR POSTORDER(Left,Right,Root)::
-        System.out.println(indent+node.value);
+         private void display(Node node,String indent){
+            if(node==null){
+                return;
+            }//FOR PREORDER(Root,left,Right)
+            //System.out.println(indent+node.value);
+            display(node.left,indent+"\t");
+            /*
+            FOR INORDER(left,Root,Right)::
+            System.out.println(indent+node.value);
+             */
+            display(node.right,indent+"\t");
+            //
+           // FOR POSTORDER(Left,Right,Root)::
+            System.out.println(indent+node.value);
     }
 
     public int diameter(){
-
         return diameter(this.root);
     }
-    private int diameter(Node node){
+        private int diameter(Node node){
         if(node==null){
             return 0;
         }
@@ -154,6 +153,7 @@ public class BT {
 
         return node1;
     }
+
     public int find(int in[],int ele){
         for (int i = 0; i <in.length ; i++) {
             if(in[i]==ele){

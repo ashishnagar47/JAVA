@@ -197,30 +197,7 @@ public class linkedList {
 //
 //    }
 
-    public linkedList mergeSort(linkedList L1, linkedList L2) {
-        linkedList list = new linkedList();
-        Node First = L1.head;
-        Node Second = L2.head;
-        while (First != null && Second != null) {
-            if (First.value < Second.value) {
-                list.insertLast(First.value);
-                First = First.next;
-            } else {
-                list.insertLast(Second.value);
-                Second = Second.next;
-            }
-        }
-        while (First != null) {
-            list.insertLast(First.value);
-            First = First.next;
-        }
-        while (Second != null) {
-            list.insertLast(Second.value);
-            Second = Second.next;
-        }
-        return list;
 
-    }
 
     public linkedList oddEven(linkedList L1) {
         linkedList odd = new linkedList();
@@ -271,15 +248,19 @@ public class linkedList {
             tail.next = null;
     }
 
-    public Node midValue(){
-            Node temp=head;
-            Node temp2=head;
-            while(temp2!=null && temp2.next!=null){
-                temp=temp.next;
-                temp2=temp2.next.next;
-            }
-            return temp;
+public Node midValue(){
+
+    Node temp=head;
+    Node temp1=head;
+
+    while(temp1.next!=null && temp1.next.next!=null){
+
+        temp=temp.next;
+        temp1=temp1.next.next;
     }
+
+    return temp;
+}
     
     public linkedList mergesort(linkedList L1){
 
@@ -295,13 +276,39 @@ public class linkedList {
             linkedList second=new linkedList();
             second.head=mid.next;
             second.tail=L1.tail;
-            second.size=(L1.size+1)/2;
+            second.size=(L1.size)/2;
             first.tail.next=null;
             first=mergesort(first);
             second=mergesort(second);
             return mergeSort(first,second);
     }
 
+    public linkedList mergeSort(linkedList L1, linkedList L2) {
+        L1.display();
+        L2.display();
+        linkedList list = new linkedList();
+        Node First = L1.head;
+        Node Second = L2.head;
+        while (First != null && Second != null) {
+            if (First.value < Second.value) {
+                list.insertLast(First.value);
+                First = First.next;
+            } else {
+                list.insertLast(Second.value);
+                Second = Second.next;
+            }
+        }
+        while (First != null) {
+            list.insertLast(First.value);
+            First = First.next;
+        }
+        while (Second != null) {
+            list.insertLast(Second.value);
+            Second = Second.next;
+        }
+        return list;
+
+    }
     public int kthFromlast(int index){
         Node fast=head;
         Node slow=head;

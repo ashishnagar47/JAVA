@@ -9,19 +9,19 @@ public class BTClient {
         File file=new File("Input");
         Scanner s=new Scanner(file);
         BT Tree=new BT();
-        Tree.insert(s);
-        Tree.insert(s);
-        Tree.insert(s);
-        Tree.insert(s);
-        Tree.insert(s);
-        Tree.display();
+//        Tree.insert(s);
+//        Tree.insert(s);
+//        Tree.insert(s);
+//        Tree.insert(s);
+//        Tree.insert(s);
+//        Tree.display();
        // System.out.println("Sum"+Tree.sum());
        // Tree.display();
-        System.out.println(Tree.diameter());
+       // System.out.println(Tree.diameter());
        // Tree.levelOrder();
         int[] pre={1,2,3};
         int[] in={3,2,1};
-        //Tree.populatebyprein(pre,in);
+        Tree.populatebyprein(pre,in);
        // System.out.println(Tree.height());
         //BT.populatebyprein(pre,in);
 

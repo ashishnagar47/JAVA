@@ -50,11 +50,11 @@ public class linkedListAlgorithms {
 
     public void display(){
         Node temp=head;
-        while(temp!=tail){
+        while(temp!=null){
             System.out.print(temp.value+"===>");
             temp=temp.next;
         }
-        System.out.print(temp.value);
+        System.out.print("null");
     }
 
     /*
@@ -117,36 +117,47 @@ public class linkedListAlgorithms {
         MERGE SORT ALGO
     */
     public Node midValue(){
+
         Node temp=head;
-        Node temp2=head;
-        while(temp2!=null && temp2.next!=null){
+        Node temp1=head;
+
+        while(temp1.next!=null && temp1.next.next!=null){
+
             temp=temp.next;
-            temp2=temp2.next.next;
+            temp1=temp1.next.next;
         }
+
         return temp;
     }
 
-    public linkedListAlgorithms mergeSort(linkedListAlgorithms l){
-        linkedListAlgorithms First=new linkedListAlgorithms();
-        First.head=l.head;
-        Node mid=l.midValue();
-        First.tail=mid;
+    public linkedListAlgorithms mergesort(linkedListAlgorithms L1){
 
-        linkedListAlgorithms Second=new linkedListAlgorithms();
-        Second.head=mid.next;
-        Second.tail=l.tail;
-        First.tail.next=null;
-        First=mergeSort(First);
-        Second=mergeSort(Second);
-        return mergesort(First,Second);
+        if(L1.size==1){
+            return L1;
+        }
+        linkedListAlgorithms first=new linkedListAlgorithms();
+        Node mid=L1.midValue();
+        first.head=L1.head;
+        first.tail=mid;
+        first.size=(L1.size+1)/2;
+
+        linkedListAlgorithms second=new linkedListAlgorithms();
+        second.head=mid.next;
+        second.tail=L1.tail;
+        second.size=(L1.size)/2;
+        first.tail.next=null;
+        first=mergesort(first);
+        second=mergesort(second);
+        return mergeSort(first,second);
     }
 
-    public linkedListAlgorithms mergesort(linkedListAlgorithms L1,linkedListAlgorithms L2){
+    public linkedListAlgorithms mergeSort(linkedListAlgorithms L1, linkedListAlgorithms L2) {
+
         linkedListAlgorithms list = new linkedListAlgorithms();
         Node First = L1.head;
         Node Second = L2.head;
         while (First != null && Second != null) {
-            if (First.value < Second.value) {
+            if (First.value <= Second.value) {
                 list.insertLast(First.value);
                 First = First.next;
             } else {
@@ -163,7 +174,10 @@ public class linkedListAlgorithms {
             Second = Second.next;
         }
         return list;
+
     }
+
+    // Coma
 
 
     public static void main(String[] args) {
@@ -171,15 +185,16 @@ public class linkedListAlgorithms {
         linkedListAlgorithms l2=new linkedListAlgorithms();
         l.insertFirst(1);
         l.insertLast(5);
+
         l.insertLast(4);
         l.insertInBetween(2,1);
         //l.display();
 //        System.out.println(l.deleteFirst());
 //        System.out.println(l.deleteFirst());
 //        System.out.println(l.deleteFirst());
-//        System.out.println(l.deleteFirst());
-        l2=l2.mergeSort(l);
-        l2.display();
+//        System.out.println(l.deleteFirst())
+        l=l.mergesort(l);
+        l.display();
     }
 
 

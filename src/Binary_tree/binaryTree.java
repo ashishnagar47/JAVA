@@ -20,27 +20,38 @@ public class binaryTree {
              Node left;
              Node right;
              int data;
+             public Node(int data){
+                 this.data=data;
+             }
         }
 
         public BinaryTree() {
-            this.root = takeInput(null, false);
+            this.root = takeInput(root, false);
         }
 
         private Node takeInput(Node parent, boolean ilc) {
-            int cdata = s.nextInt();
-            Node child = new Node();
-            child.data=cdata;
-            this.size++;
+//            int cdata = s.nextInt();
+//            Node child = new Node();
+//            child.data=cdata;
+//            this.size++;
+
+            if(parent==null){
+                int cdata=s.nextInt();
+               Node child=new Node(cdata);
+                size++;
+                return child;
+            }
+
 
             boolean left = s.nextBoolean();
             if (left) {
-                child.left = takeInput(child, true);
+                parent.left = takeInput(parent.left, true);
             }
             boolean right = s.nextBoolean();
             if (right) {
-                child.right = takeInput(child, false);
+                parent.right = takeInput(parent.right, false);
             }
-            return child;
+            return parent;
         }
         public boolean identical(BinaryTree other){
             return identical(this.root,other.root);
